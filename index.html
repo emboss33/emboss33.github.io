@@ -119,6 +119,7 @@
                 <p><strong>기술 스택:</strong> Node.js, MongoDB, React Native, GPT API, Redis,(Docker), JWT, Socket.IO, RESTful API, 소셜 로그인</p>
                 <ul>
                     <li><strong class="highlight">React Native</strong>를 사용하여 모바일 앱 개발</li>
+                    <li><strong class="highlight">node.js</strong>를 사용하여 서버 구축</li>
                     <li><strong class="highlight">GPT API</strong>를 활용한 AI 문장 교정 시스템 구축</li>
                     <li>FIFO 기법과 <strong class="highlight">Redis (Docker)</strong> 캐시를 활용한 사용자 처리 최적화</li>
                     <li><strong>JWT 인증 시스템</strong> (임시토큰 & 리프레시 토큰 활용)으로 보안 강화</li>
@@ -183,7 +184,7 @@
                 <span class="skill">React Native</span>
                 <span class="skill">Node.js</span>
                 <span class="skill">MongoDB</span>
-                <span class="skill">GPT API</span>
+                <span class="skill">외부 API 연동</span>
                 <span class="skill">Redis (Docker)</span>
                 <span class="skill">JWT 인증</span>
                 <span class="skill">Socket.IO</span>
@@ -199,6 +200,90 @@
                 <span class="skill">Axios</span>
             </div>
         </section>
+
+                <!-- Project: RFID 수신기를 연동한 지도 앱 -->
+        <section class="section">
+            <h2>Project: RFID 수신기를 연동한 지도 앱</h2>
+            <p><strong>기간:</strong> 2024.06 ~ 2024.08</p>
+            <p>
+                신호등 근처에 RFID 수신기를 설치하여, 블루투스 디바이스와 연동된 사용자가 접근하면  
+                서버에서 데이터를 수집하고 사용자에 Google 지도 API를 통해 앱에 정보를 업데이트하는 시스템입니다.
+                사용자가 수신기 근처를 지나갈 때 음성 안내 기능이 작동하여 안전을 도와줍니다.
+            </p>
+
+            <h3>📌 프로젝트 개요 및 맡은 역할</h3>
+            <ul>
+                <li>프레임워크: React Native</li>
+                <li>서버: Node.js + Express + MySQL</li>
+                <li>지도 서비스: Google Maps API</li>
+                <li>거리 측정 알고리즘:Haversine 공식 활용</li>
+                <li>데이터 연동: RFID 수신기가 신호를 감지하면 DB에 업데이트</li>
+                <li>음성 안내:사용자 근처를 지날 때 Sound 파일 재생</li>
+            </ul>
+
+            <h3>🚀 주요 기능</h3>
+            <ul>
+                <li>🔵 RFID 수신기가 블루투스 디바이스 감지 시, 서버에 실시간 데이터 업데이트</li>
+                <li>🗺️ Google 지도 API 연동으로 현재 위치 및 수신기 근처 정보 표시</li>
+                <li>🔊 사운드 파일을 이용한 음성 안내 기능</li>
+                <li>📍 Haversine 기법을 활용하여 정확한 거리 측정 및 방향 안내</li>
+                <li>🔄 React Native 기반의 UI/UX 설계로 직관적인 사용자 경험 제공</li>
+            </ul>
+
+            <h3>⚙️ 사용된 기술</h3>
+            <div class="skills-list">
+                <span class="skill">React Native</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Express.js</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">Google Maps API</span>
+                <span class="skill">Bluetooth Integration</span>
+                <span class="skill">Haversine Algorithm</span>
+                <span class="skill">PYTHON</span>
+            </div>
+        </section>
+
+                <!-- Project: Massive Traffic Optimization System (MTOS) -->
+                <section class="section">
+                    <h2>Project: Massive Traffic Optimization System (MTOS) - 단독</h2>
+                    <p>
+                        대규모 온라인 마케팅 자동화를 위한 트래픽 생성 및 검색 알고리즘 최적화 시스템을 구축하였습니다.  
+                        온프레미스 서버 60대와 Docker 기반 가상머신 280대를 통합 관리하며 고성능 트래픽 분산 및 검색 알고리즘 최적화를 수행하였습니다.
+                    </p>
+        
+                    <h3>📌 프로젝트 개요</h3>
+                    <ul>
+                        <li>기간: 2023년 11월 ~ 2024년 3월</li>
+                        <li>환경: Ubuntu 서버, Docker 컨테이너, Bash 스크립트</li>
+                        <li>구성: 온프레미스 서버 60대 + Docker 컨테이너 280대 통합 관리</li>
+                        <li>보안: SSH Private Key 인증 및 IP 제한 적용</li>
+                        <li>자동화: Bash 스크립트 및 Crontab 활용하여 컨테이너 자동 실행</li>
+                        <li>검색 알고리즘 최적화:내부 컨테이너에서 Python 기반 알고리즘 적용</li>
+                    </ul>
+        
+                    <h3>🚀 주요 기능</h3>
+                    <ul>
+                        <li>🌍 트래픽 생성 및 부하 테스트 - 다중 서버 및 컨테이너를 활용하여 트래픽 관리, 부하 최적화</li>
+                        <li>🛠 Docker 컨테이너 280대 통합 관리 - 자동화된 스크립트를 통해 트래픽 분산 처리</li>
+                        <li>🔒 보안 강화 - SSH Private Key 인증 및 IP 제한을 통해 컨테이너 접근 제어</li>
+                        <li>⏳ Crontab & Bash 자동화** - 각 컨테이너가 특정 시간에 동작하도록 예약 실행</li>
+                        <li>🧠 Python 기반 자동화 알고리즘 최적화</li>
+                        <li>비인가 접근 차단 솔류션 자동화 알고리즘 </li>
+                    </ul>
+        
+                    <h3>⚙️ 사용된 기술</h3>
+                    <div class="skills-list">
+                        <span class="skill">Ubuntu</span>
+                        <span class="skill">Docker</span>
+                        <span class="skill">Bash Script</span>
+                        <span class="skill">Crontab</span>
+                        <span class="skill">SSH Private Key</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">네트워크 트래픽 분석</span>
+                        <span class="skill">온라인 마케팅 자동화</span>
+                        <span class="skill">서버 모니터링</span>
+                    </div>
+                </section>
     </div>
 </body>
 </html>
