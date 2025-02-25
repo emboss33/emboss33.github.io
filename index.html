@@ -1,1 +1,204 @@
-"Hello Worl2345d" 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 - 백종민</title>
+    <!-- Google Fonts 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 전체 스타일 */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #222;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #222;
+            font-weight: 600;
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* 강조 텍스트 */
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* 섹션 스타일 */
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Work Experience 스타일 */
+        .experience {
+            border-left: 4px solid #007BFF;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #007BFF;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Skills 섹션 스타일 */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #007BFF;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>백종민</h1>
+            <p style="font-weight: 600; font-size: 18px;">풀스택 개발자 | AI & 웹 기술 활용</p>
+        </header>
+
+        <!-- About Me -->
+        <section class="section">
+            <h2>About Me</h2>
+            <p>
+                안녕하세요! 저는 AI 및 웹 기술을 활용해 <strong>창의적인 솔루션</strong>을 만드는 
+                <strong>풀스택 개발자 백종민</strong>입니다.  
+                개발자는 단순히 요구사항을 해결하는 것이 아니라,  
+                <strong class="highlight">사용자의 관점에서 여러 번 시뮬레이션하며 최적의 결과를 도출하는 과정</strong>이 중요하다고 생각합니다.  
+                <span class="highlight">신중에 신중을 기울이며 최적의 솔루션을 만들어가는 것</span>을 지향합니다.
+            </p>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="experience">
+                <h3>AI 융합 STT 글로벌 통역 채팅앱 (단독 개발)</h3>
+                <p><strong>기간:</strong> 2024.09 ~ 2024.11</p>
+                <p><strong>기술 스택:</strong> Node.js, MongoDB, React Native, GPT API, Redis,(Docker), JWT, Socket.IO, RESTful API, 소셜 로그인</p>
+                <ul>
+                    <li><strong class="highlight">React Native</strong>를 사용하여 모바일 앱 개발</li>
+                    <li><strong class="highlight">GPT API</strong>를 활용한 AI 문장 교정 시스템 구축</li>
+                    <li>FIFO 기법과 <strong class="highlight">Redis (Docker)</strong> 캐시를 활용한 사용자 처리 최적화</li>
+                    <li><strong>JWT 인증 시스템</strong> (임시토큰 & 리프레시 토큰 활용)으로 보안 강화</li>
+                    <li><strong class="highlight">Socket.IO</strong>를 통한 실시간 대화 지원 (DB와 사용자 검증)</li>
+                    <li>로컬(외부 API 서버,JWT 서버, Database 서버,Redis 캐시 서버,Redis 메시지큐 서버),Public ( Socket 서버,Main)서버로 <strong>아키텍처 구축</strong></li>
+                    <li>소켓 통신 안전성 강화 및 알림 서비스 구현</li>
+                    <li>데이터 암호화 처리</li>
+                    <li>각종 보안 알고리즘 적용 (DOSC,사용자 정보 위조,인가되지않은 접근 등)</li>
+                </ul>
+            </div>
+        </section>
+
+                <!-- Code Structure -->
+                <section class="section">
+                    <h2>Code Structure</h2>
+                    <p>
+                        혼자 개발하더라도 유지보수와 확장성을 고려하여 모듈화된 구조로 항상 구조화된 설계를 지향합니다
+                        각 폴더는 <strong>역할별로 나뉘어 있으며</strong>, 기능 단위로 구분하여 개발하므로 협업과 유지보수를 항상 고려합니다.
+                    </p>
+                    
+                    <pre style="background-color: #333; color: #fff; padding: 15px; border-radius: 8px; font-size: 14px; overflow-x: auto;">
+        📂 src/
+         ├── 📂 context/        # 데이터베이스 및 소켓 관련 컨텍스트 관리
+         │   ├── databaseContext.js
+         │   ├── SocketContext.js
+         │
+         ├── 📂 features/       # 주요 기능별 폴더
+         │   ├── 📂 Chat/      # 채팅 관련 기능
+                ├── 📂 components/      # 부분별 컴포넌트 인터페이스 모음
+                ├── 📂 hooks/      # 백그라운드 로직 모음
+                ├── 📂 Images/      # 이미지  모음                
+                ├── 📂 styles/      # CSS  모음
+                 ChatScreen.js # Main.js
+         │   ├── 📂 Home/      # 홈 화면 기능
+         │   ├── 📂 More (회원가입,로그인)                     
+         │
+         ├── 📂 navigation/     # 네비게이션 관리
+         │   ├── AppNavigator.js
+         │
+         ├── 📂 services/       # API 호출, 데이터 처리, 인증
+         │   ├── authService.js
+         │   ├── databaseService.js
+         │   ├── socketService.js
+         │   ├── tokenService.js
+         │   ├── More
+                    </pre>
+        
+                    <p>
+                        - <strong>context/</strong>: 소켓 및 데이터베이스 관련 상태 관리 (SocketContext, databaseContext)
+                        <br>
+                        - <strong>features/</strong>: 각 기능별 (Chat, Home,Regist,Login 등) 독립적인 모듈로 분리
+                        <br>
+                        - <strong>navigation/</strong>: React Navigation을 사용한 앱 내 라우팅 관리
+                        <br>
+                        - <strong>services/</strong>: API 요청, 소켓 서비스, 데이터베이스 핸들링을 담당
+                    </p>
+                </section>
+        <!-- Skills -->
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span class="skill">React Native</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">MongoDB</span>
+                <span class="skill">GPT API</span>
+                <span class="skill">Redis (Docker)</span>
+                <span class="skill">JWT 인증</span>
+                <span class="skill">Socket.IO</span>
+                <span class="skill">RESTful API</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Firebase</span>
+                <span class="skill">WebSocket 인증</span>
+                <span class="skill">Redis Pub/Sub</span>
+                <span class="skill">IP 차단 시스템</span>
+                <span class="skill">Rate Limiting</span>
+                <span class="skill">Microservices</span>
+                <span class="skill">비동기 메시지 큐</span>
+                <span class="skill">Axios</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
